@@ -19,4 +19,4 @@ after_success:
  - docker push akys/multi-client 
  - docker push akys/multi-nginx 
  - docker push akys/multi-server 
- - docker push akys/multi-workder 
+ - docker push akys/multi-worker 
