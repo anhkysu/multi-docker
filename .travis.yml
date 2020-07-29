@@ -9,14 +9,14 @@ script:
  - docker run -e CI=true akys/react-test npm test
 
 after_success:
- - docker build -t akys/multi-client ./client
- - docker build -t akys/multi-nginx ./nginx
- - docker build -t akys/multi-server ./server
- - docker build -t akys/multi-worker ./worker
+ - docker build -t akystech/multi-client ./client
+ - docker build -t akystech/multi-nginx ./nginx
+ - docker build -t akystech/multi-server ./server
+ - docker build -t akystech/multi-worker ./worker
  # Docker login
  - echo "$DOCKER_PASSWORD" | docker login -username "$DOCKER_ID" --password-stdin
  # Take those images and push them to docker hub
- - docker push akys/multi-client
- - docker push akys/multi-nginx
- - docker push akys/multi-server
- - docker push akys/multi-worker
+ - docker push akystech/multi-client
+ - docker push akystech/multi-nginx
+ - docker push akystech/multi-server
+ - docker push akystech/multi-worker
