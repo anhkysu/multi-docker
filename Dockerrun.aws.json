@@ -24,7 +24,7 @@
   },
   {
    "name": "nginx",
-   "image": "akystech/nginx",
+   "image": "akystech/multi-nginx",
    "hostname": "nginx",
    "essential": true,
    "portMappings": [
